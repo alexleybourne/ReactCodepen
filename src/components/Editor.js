@@ -31,7 +31,8 @@ export default function Editor(props) {
                 options={{
                     lineWrapping: true,
                     lint: true,
-                    mode: 'javascript',
+                    mode: language,
+                    theme: 'material',
                     lineNumbers: true
                 }}
             />
