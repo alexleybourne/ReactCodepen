@@ -24,7 +24,7 @@ function App() {
         />
         <Editor
           language="javascript"
-          displayName="Javascript"
+          displayName="JS"
           value={javascript}
           onChange={setJavascript}
         />
