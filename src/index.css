@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   padding: .5rem;
   background-color:hsl(225, 6%, 25%);
+  transition-duration: 0.2s;
 }
 
 .editor-title {
@@ -41,4 +42,8 @@ body {
 
 .CodeMirror {
   height: 100% !important;
+}
+
+.closed {
+  flex-grow: 0;
 }
