@@ -25,6 +25,14 @@ body {
   transition-duration: 0.2s;
 }
 
+.editor-container.closed {
+  flex-grow: 0;
+}
+
+.editor-container.closed .CodeMirror-scroll {
+  position: absolute;
+}
+
 .editor-title {
   color: white;
   display: flex;
@@ -42,8 +50,4 @@ body {
 
 .CodeMirror {
   height: 100% !important;
-}
-
-.closed {
-  flex-grow: 0;
 }
