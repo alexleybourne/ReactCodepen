@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavBar from './NavBar'
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
 
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <NavBar/>
       <div className="pane top-pane">
         <Editor 
           language="xml"
