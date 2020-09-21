@@ -1,20 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 
 function App() {
 
   const [html, setHtml] = useState('')
   const [css, setCss] = useState('')
-  const [javascript, setJavascript] = useState('')
+  const [js, setJs] = useState('')
+  const [srcDoc, setSrcDoc] = useState('')
 
-  const srcDoc = `
-    <html>
-      <body>${html}</body>
-      <style>${css}</style>
-      <script>${javascript}</script>
-    </html>
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
+      `)
+    }, 250)
 
-  `
+    return () => clearTimeout(timeout)
+  }, [html, css, js])
 
   return (
     <>
@@ -34,8 +40,8 @@ function App() {
         <Editor
           language="javascript"
           displayName="JS"
-          value={javascript}
-          onChange={setJavascript}
+          value={js}
+          onChange={setJs}
         />
       </div>
       <div className="pane">
