@@ -76,6 +76,15 @@ body {
   height: 100% !important;
 }
 
+.edge {
+  padding-top: 6px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
 .iframe {
   background:white;
   margin:.5rem;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar'
 import Editor from './Editor'
+import AEditor from './AEditor'
 import useLocalStorage from '../hooks/useLocalStorage'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <>
       <NavBar/>
       <div className="pane top-pane">
+        <AEditor/>
         <Editor 
           language="xml"
           displayName="HTML"
@@ -47,6 +49,7 @@ function App() {
           onChange={setJs}
         />
       </div>
+      <div className="edge"><p>OUTPUT:</p></div>
       <div className="pane iframe">
         <iframe
           srcDoc={srcDoc}
